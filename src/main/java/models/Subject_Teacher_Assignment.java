@@ -4,9 +4,6 @@ import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-import java.util.List;
-import java.util.ArrayList;
 import javax.persistence.*;
 
 @Entity

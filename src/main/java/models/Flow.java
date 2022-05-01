@@ -4,7 +4,6 @@ import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 import javax.persistence.*;
@@ -27,7 +26,7 @@ public class Flow {
     private String flowName;
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Group_Class> group;
-    public Flow(Department department, String flowName){
+    public Flow(String flowName, Department department){
         this.department=department;
         this.flowName=flowName;
         group=new ArrayList<>();

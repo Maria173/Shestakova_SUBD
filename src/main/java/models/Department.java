@@ -4,7 +4,6 @@ import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 import javax.persistence.*;
@@ -30,7 +29,7 @@ public class Department {
     private List<Flow> flow;
     @OneToMany(mappedBy = "assignment", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Subject_Teacher_Assignment> assignment;
-    public Department(Deanery deanery, String departmentName, int phone){
+    public Department(String departmentName, int phone, Deanery deanery){
         this.deanery=deanery;
         this.departmentName=departmentName;
         this.phone=phone;
