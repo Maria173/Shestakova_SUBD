@@ -86,7 +86,7 @@ public class StudentLogic {
         student.setStudentName(studentName);
         student.setStudentMiddlename(studentMiddlename);
         student.setBirthdate(sqlDate);
-        student.setGroup(session.get(Group_Class.class, idGroup));
+        student.setGroup_class(session.get(Group_Class.class, idGroup));
         session.save(student);
     }
 
@@ -134,7 +134,7 @@ public class StudentLogic {
             case 5:
                 System.out.println("Введите номер группы");
                 int idGroup = scanner.nextInt();
-                student = session.createQuery("SELECT a from Student a where group = \'" + idGroup + "\'", Student.class).getResultList();
+                student = session.createQuery("SELECT a from Student a where group_class = \'" + idGroup + "\'", Student.class).getResultList();
                 break;
         }
         System.out.println(student);

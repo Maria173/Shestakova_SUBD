@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "group", schema = "public", catalog = "lab4")
+@Table(name = "group_class", schema = "public", catalog = "lab4")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -18,18 +18,17 @@ import javax.persistence.*;
 public class Group_Class {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
     private int id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "flow_id")
-    private Flow flow;
     @Column(name = "group_name")
     private String groupName;
     @Column(name = "admission_year")
     private Date admissionYear;
-    @OneToMany(mappedBy = "grade_sheet", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "flow_id")
+    private Flow flow;
+    @OneToMany(mappedBy = "group_class", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Grade_Sheet> grade_sheet;
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "group_class", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Student> student;
     public Group_Class(String groupName, Date admissionYear, Flow flow){
         this.groupName=groupName;

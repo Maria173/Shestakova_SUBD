@@ -17,7 +17,6 @@ import javax.persistence.*;
 public class Department {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
     private int id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "deanery_id")
@@ -27,14 +26,14 @@ public class Department {
     private int phone;
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Flow> flow;
-    @OneToMany(mappedBy = "assignment", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Subject_Teacher_Assignment> assignment;
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Subject_Teacher_Assignment> subject_teacher_assignment;
     public Department(String departmentName, int phone, Deanery deanery){
         this.deanery=deanery;
         this.departmentName=departmentName;
         this.phone=phone;
         flow=new ArrayList<>();
-        assignment=new ArrayList<>();
+        subject_teacher_assignment=new ArrayList<>();
     }
     @Override
     public String toString() {

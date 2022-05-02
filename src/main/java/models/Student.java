@@ -28,20 +28,20 @@ public class Student {
     private Date birthdate;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "group_id")
-    private Group_Class group;
-    @OneToMany(mappedBy = "subgrade_sheet", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Group_Class group_class;
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Subgrade_Sheet> subgrade_sheet;
-    public Student(String studentSurname, String studentName, String studentMiddlename, Date birthdate, Group_Class group){
+    public Student(String studentSurname, String studentName, String studentMiddlename, Date birthdate, Group_Class group_class){
         this.studentSurname=studentSurname;
         this.studentName=studentName;
         this.studentMiddlename=studentMiddlename;
         this.birthdate=birthdate;
-        this.group=group;
+        this.group_class=group_class;
         subgrade_sheet=new ArrayList<>();
     }
     @Override
     public String toString() {
         return String.format("\nid: %d || фамилия: %s || имя: %s || отчество: %s || дата рождения: %s || группа: %s ",
-                id, studentSurname, studentName, studentMiddlename, birthdate, group);
+                id, studentSurname, studentName, studentMiddlename, birthdate, group_class);
     }
 }

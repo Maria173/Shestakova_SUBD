@@ -84,7 +84,7 @@ public class GradeSheetLogic {
         Grade_Sheet grade_sheet = session.get(Grade_Sheet.class, id);
         grade_sheet.setYear(sqlDate);
         grade_sheet.setSemester(semester);
-        grade_sheet.setGroup(session.get(Group_Class.class, idGroup));
+        grade_sheet.setGroup_class(session.get(Group_Class.class, idGroup));
         grade_sheet.setTeacher(session.get(Teacher.class, idTeacher));
         grade_sheet.setSubject(session.get(Subject.class, idSubject));
         session.save(grade_sheet);
@@ -124,7 +124,7 @@ public class GradeSheetLogic {
             case 3:
                 System.out.println("Введите номер группы");
                 int idGroup = scanner.nextInt();
-                grade_sheet = session.createQuery("SELECT a from Grade_Sheet a where group = " + idGroup , Grade_Sheet.class).getResultList();
+                grade_sheet = session.createQuery("SELECT a from Grade_Sheet a where group_class = " + idGroup , Grade_Sheet.class).getResultList();
                 break;
             case 4:
                 System.out.println("Введите номер преподавателя");

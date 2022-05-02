@@ -26,9 +26,9 @@ public class Teacher {
     private String teacherMiddlename;
     private String post;
     private int experience;
-    @OneToMany(mappedBy = "assignment", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Subject_Teacher_Assignment> assignment;
-    @OneToMany(mappedBy = "grade_sheet", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Subject_Teacher_Assignment> subject_teacher_assignment;
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Grade_Sheet> grade_sheet;
     public Teacher(String teacherSurname, String teacherName, String teacherMiddlename, String post, int experience){
         this.teacherSurname=teacherSurname;
@@ -36,7 +36,7 @@ public class Teacher {
         this.teacherMiddlename=teacherMiddlename;
         this.post=post;
         this.experience=experience;
-        assignment=new ArrayList<>();
+        subject_teacher_assignment=new ArrayList<>();
         grade_sheet=new ArrayList<>();
     }
     @Override

@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b69ffd70-046f-4644-bbd1-acc685389a4a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/617f1f0d-e027-42d1-9510-95601a228a6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/617f1f0d-e027-42d1-9510-95601a228a6a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/617f1f0d-e027-42d1-9510-95601a228a6a/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/617f1f0d-e027-42d1-9510-95601a228a6a/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logics/GradeSheetLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logics/GradeSheetLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logics/StudentLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logics/StudentLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Flow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Flow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Grade_Sheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Grade_Sheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Group_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Group_Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Subject_Teacher_Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Subject_Teacher_Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="28ZCoSEZX6SPHuDoGVVj8xA7abl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -53,6 +69,20 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="subdLab5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651414907230</updated>
-      <workItem from="1651414922227" duration="21012000" />
+      <workItem from="1651414922227" duration="29067000" />
     </task>
     <servers />
   </component>

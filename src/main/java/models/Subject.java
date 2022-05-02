@@ -21,12 +21,12 @@ public class Subject {
     @Column(name = "subject_name")
     private String subjectName;
     private int hours;
-    @OneToMany(mappedBy = "assignment", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Subject_Teacher_Assignment> assignment;
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Subject_Teacher_Assignment> subject_teacher_assignment;
     public Subject(String subjectName, int hours){
         this.subjectName=subjectName;
         this.hours=hours;
-        assignment=new ArrayList<>();
+        subject_teacher_assignment=new ArrayList<>();
     }
     @Override
     public String toString() {

@@ -18,25 +18,24 @@ import javax.persistence.*;
 public class Grade_Sheet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
     private int id;
     private Date year;
     private int semester;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "group_id")
-    private Group_Class group;
+    private Group_Class group_class;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "subject_id")
     private Subject subject;
-    @OneToMany(mappedBy = "subgrade_sheet", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "grade_sheet", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Subgrade_Sheet> subgrade_sheet;
-    public Grade_Sheet(Date year, int semester, Group_Class group, Teacher teacher, Subject subject){
+    public Grade_Sheet(Date year, int semester, Group_Class group_class, Teacher teacher, Subject subject){
         this.year=year;
         this.semester=semester;
-        this.group=group;
+        this.group_class=group_class;
         this.teacher=teacher;
         this.subject=subject;
         subgrade_sheet=new ArrayList<>();
@@ -44,6 +43,6 @@ public class Grade_Sheet {
     @Override
     public String toString() {
         return String.format("\nid: %d || год: %s || семестр: %s || группа: %s || преподаватель: %s || предмет: %s ",
-                id, year, semester, group, teacher, subject);
+                id, year, semester, group_class, teacher, subject);
     }
 }

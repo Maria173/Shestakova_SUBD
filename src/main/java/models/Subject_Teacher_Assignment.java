@@ -7,7 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "assignment", schema = "public", catalog = "lab4")
+@Table(name = "subject_teacher_assignment", schema = "public", catalog = "lab4")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,7 +15,6 @@ import javax.persistence.*;
 public class Subject_Teacher_Assignment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
     private int id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")

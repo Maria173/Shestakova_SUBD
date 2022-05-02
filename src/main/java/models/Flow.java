@@ -17,19 +17,18 @@ import javax.persistence.*;
 public class Flow {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
     private int id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")
     private Department department;
     @Column(name = "flow_name")
     private String flowName;
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Group_Class> group;
+    @OneToMany(mappedBy = "flow", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Group_Class> group_class;
     public Flow(String flowName, Department department){
         this.department=department;
         this.flowName=flowName;
-        group=new ArrayList<>();
+        group_class=new ArrayList<>();
     }
     @Override
     public String toString() {

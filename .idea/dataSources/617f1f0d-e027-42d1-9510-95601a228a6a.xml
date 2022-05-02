@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.38">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-13151||-9223372036854775808|c|G
-13151||10|c|G
-13151||10|C|G
-13151||10|T|G</Grants>
-      <IntrospectionStateNumber>723</IntrospectionStateNumber>
+      <IntrospectionStateNumber>725</IntrospectionStateNumber>
       <ServerVersion>11.15</ServerVersion>
       <StartupTime>1649225828</StartupTime>
       <TimeZones>true ACDT
@@ -1408,7 +1400,7 @@ true posixrules
 12856||-9223372036854775807|C|G
 12856||-9223372036854775808|U|G
 12856||-9223372036854775807|U|G</Grants>
-      <IntrospectionStateNumber>723</IntrospectionStateNumber>
+      <IntrospectionStateNumber>726</IntrospectionStateNumber>
       <ObjectId>16392</ObjectId>
       <Relations>sequence|table|16394|16396|1
 sequence|table|16402|16404|1
@@ -4777,7 +4769,7 @@ sequence|table|16620|16622|1
     <schema id="256" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>723</IntrospectionStateNumber>
+      <IntrospectionStateNumber>726</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>359</StateNumber>
       <OwnerName>postgres</OwnerName>
